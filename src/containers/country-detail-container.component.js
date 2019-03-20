@@ -9,7 +9,8 @@ class CountryDetailsContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(getCountry(this.props.params.id));
+    const { dispatch, params } = this.props;
+    dispatch(getCountry(params.id));  
   }
 
   render() {
